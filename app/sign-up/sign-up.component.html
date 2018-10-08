@@ -1,0 +1,19 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4" style="padding-top: 200px">
+      <form class="form-group" #form="ngForm" (submit)="sendForm(form)">
+        <label>User Name</label>
+        <input ngModel class="form-control" type="text" name="userName">
+        <label>PassWord</label>
+        <input ngModel class="form-control" type="password" name="password">
+        <Label>Admin Roots   </Label>
+        <br>
+        <input ngModel type="checkbox" name="adminRoot" checked>
+        <input [disabled]="form.invalid && !form.touched" type="submit" class="btn btn-success" style="display: block; margin-top: 20px; margin-left: auto;!important; margin-right: 0;!important;">
+      </form>
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+</div>
